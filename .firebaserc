@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "modelo-de-1er-parcial-736d1"
+  },
+  "targets": {
+    "modelo-de-1er-parcial-736d1": {
+      "hosting": {
+        "repaso-1-parcial": [
+          "modelo-de-1er-parcial-736d1"
+        ]
+      }
+    }
+  }
+}

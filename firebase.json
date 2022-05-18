@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "target": "repaso-1-parcial",
+    "public": "repaso-parcial1",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
