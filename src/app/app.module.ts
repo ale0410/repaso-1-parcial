@@ -23,6 +23,9 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { ActorPeliculaComponent } from './componentes/actor-pelicula/actor-pelicula.component';
+import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
+import { DetalleActorComponent } from './componentes/detalle-actor/detalle-actor.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
     ActorAltaPipe,
     TablaPaisesComponent,
     TablaActorComponent,
-    NavbarComponent
+    NavbarComponent,
+    ActorPeliculaComponent,
+    DetallePaisComponent,
+    DetalleActorComponent,
   ],
   imports: [
     BrowserModule,

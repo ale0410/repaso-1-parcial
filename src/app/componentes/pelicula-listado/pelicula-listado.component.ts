@@ -1,5 +1,6 @@
-import { Component, OnInit, Input ,Output,EventEmitter} from '@angular/core';
-import { Pelicula } from 'src/app/clases/pelicula'; 
+import { Component, Input, OnInit } from '@angular/core';
+import { Actor } from 'src/app/clases/actor';
+import { Pelicula } from 'src/app/clases/pelicula';
 
 @Component({
   selector: 'app-pelicula-listado',
@@ -8,7 +9,7 @@ import { Pelicula } from 'src/app/clases/pelicula';
 })
 export class PeliculaListadoComponent implements OnInit {
 
-  @Input() inputListadoPeliculas!: Pelicula[];
+  @Input() inputListadoPeliculas : Pelicula[] = [];
 
   constructor() { }
 

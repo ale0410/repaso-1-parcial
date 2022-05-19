@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ActorAltaComponent } from './componentes/actor-alta/actor-alta.component';
 import { ActorListadoComponent } from './componentes/actor-listado/actor-listado.component'; 
+import { ActorPeliculaComponent } from './componentes/actor-pelicula/actor-pelicula.component';
 
 import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'peliculas/alta', component:PeliculaAltaComponent },
   { path: 'actor/alta', component:ActorAltaComponent },
   { path: 'actor/listado', component:ActorListadoComponent },
-  { path: 'peliculas/listado', component:PeliculaListadoComponent }
+  { path: 'peliculas/listado', component:PeliculaListadoComponent },
+  { path: 'actor/actorpelicula', component:ActorPeliculaComponent }
 
 ];
 

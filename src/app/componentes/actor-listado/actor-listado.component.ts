@@ -1,5 +1,5 @@
 import { FirestoreService } from 'src/app/servicios/firestore.service';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Actor } from 'src/app/clases/actor';
 
 @Component({
@@ -10,7 +10,9 @@ import { Actor } from 'src/app/clases/actor';
 export class ActorListadoComponent implements OnInit {
 
   actores : Actor[] = [];
-  @Output() actorSeleccionado : EventEmitter<any>= new EventEmitter<any>(); 
+  @Input() inputPantalla : boolean = false;
+  @Output() actorSeleccionado : EventEmitter<any>= new EventEmitter<any>();
+  
 
   constructor(public srv: FirestoreService) { }
 
@@ -19,11 +21,12 @@ export class ActorListadoComponent implements OnInit {
        listadoRef.forEach((element : any) => {
          this.actores.push(element.payload.doc.data());
        });
-      }));
+    }));
   }
 
-  getActorSeleccionado(detalleActor: Actor){
-    this.actorSeleccionado.emit(detalleActor);
+  getActorSeleccionado(detalleActor: Actor, accionSeleccionada:string){
+    this.actorSeleccionado.emit({actor: detalleActor, accion: accionSeleccionada});
+
   }
 
 }
